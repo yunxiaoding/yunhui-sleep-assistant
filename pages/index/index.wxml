@@ -1,0 +1,48 @@
+<!--pages/index/index.wxml-->
+<view class="container">
+  <view class="header">
+    <view class="moon-icon">🌙</view>
+    <view class="title">云荟睡眠助手</view>
+    <view class="subtitle">科学作息，安睡每一夜</view>
+  </view>
+
+  <view class="menu">
+    <view class="menu-item" bindtap="gotoTimer">
+      <view class="menu-icon">⏱️</view>
+      <view class="menu-text">
+        <view class="menu-title">睡眠计时</view>
+        <view class="menu-desc">记录入睡与醒来时长</view>
+      </view>
+      <view class="menu-arrow">›</view>
+    </view>
+
+    <view class="menu-item" bindtap="gotoBreath">
+      <view class="menu-icon">🫁</view>
+      <view class="menu-text">
+        <view class="menu-title">478呼吸助眠</view>
+        <view class="menu-desc">吸气4秒 屏息7秒 呼气8秒</view>
+      </view>
+      <view class="menu-arrow">›</view>
+    </view>
+
+    <view class="menu-item" bindtap="gotoCalc">
+      <view class="menu-icon">⏰</view>
+      <view class="menu-text">
+        <view class="menu-title">入睡时间推算</view>
+        <view class="menu-desc">根据起床时间倒推入睡点</view>
+      </view>
+      <view class="menu-arrow">›</view>
+    </view>
+
+    <view class="menu-item" bindtap="gotoRecords">
+      <view class="menu-icon">📋</view>
+      <view class="menu-text">
+        <view class="menu-title">睡眠记录</view>
+        <view class="menu-desc">查看历史睡眠数据</view>
+      </view>
+      <view class="menu-arrow">›</view>
+    </view>
+  </view>
+
+  <view class="footer">祝您今晚好梦 ✨</view>
+</view>

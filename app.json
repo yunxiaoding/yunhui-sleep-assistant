@@ -1,0 +1,18 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/sleep-timer/sleep-timer",
+    "pages/breath-guide/breath-guide",
+    "pages/sleep-calc/sleep-calc",
+    "pages/records/records"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#1a1a2e",
+    "navigationBarTitleText": "云荟睡眠助手",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#16213e",
+    "backgroundTextStyle": "light"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

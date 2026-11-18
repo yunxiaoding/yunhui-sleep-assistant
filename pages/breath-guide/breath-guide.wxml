@@ -1,0 +1,34 @@
+<!--pages/breath-guide/breath-guide.wxml-->
+<view class="container">
+  <view class="title">478呼吸助眠</view>
+  <view class="subtitle">吸气4秒 → 屏息7秒 → 呼气8秒</view>
+
+  <!-- 待开始 -->
+  <block wx:if="{{!running && !finished}}">
+    <view class="breath-circle idle">
+      <view class="breath-hint">准备好后开始</view>
+    </view>
+    <button class="btn-primary" bindtap="startGuide">开始引导</button>
+  </block>
+
+  <!-- 引导中 -->
+  <block wx:elif="{{running}}">
+    <view class="round-info">第 {{round}} 轮 · 共4轮</view>
+    <view class="breath-circle {{phaseClass}}">
+      <view class="phase-name">{{phase}}</view>
+      <view class="phase-count">{{countdown}}</view>
+      <view class="phase-unit">秒</view>
+    </view>
+    <button class="btn-secondary" bindtap="stopGuide">停止</button>
+  </block>
+
+  <!-- 完成 -->
+  <block wx:elif="{{finished}}">
+    <view class="breath-circle done">
+      <view class="done-icon">🌙</view>
+      <view class="done-text">呼吸引导完成</view>
+      <view class="done-hint">祝您安然入梦</view>
+    </view>
+    <button class="btn-primary" bindtap="startGuide">再来一轮</button>
+  </block>
+</view>

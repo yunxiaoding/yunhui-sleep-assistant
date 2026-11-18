@@ -1,0 +1,77 @@
+/* pages/index/index.wxss */
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 60rpx;
+  margin-bottom: 60rpx;
+}
+
+.moon-icon {
+  font-size: 100rpx;
+  margin-bottom: 20rpx;
+}
+
+.header .title {
+  font-size: 48rpx;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.header .subtitle {
+  font-size: 26rpx;
+  color: #a0a0c0;
+  margin-top: 10rpx;
+}
+
+.menu {
+  width: 100%;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 20rpx;
+  padding: 30rpx;
+  margin-bottom: 24rpx;
+}
+
+.menu-item:active {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.menu-icon {
+  font-size: 52rpx;
+  width: 80rpx;
+  text-align: center;
+}
+
+.menu-text {
+  flex: 1;
+  margin-left: 20rpx;
+}
+
+.menu-title {
+  font-size: 34rpx;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.menu-desc {
+  font-size: 24rpx;
+  color: #8888aa;
+  margin-top: 8rpx;
+}
+
+.menu-arrow {
+  font-size: 48rpx;
+  color: #555577;
+}
+
+.footer {
+  margin-top: 80rpx;
+  font-size: 24rpx;
+  color: #555577;
+  text-align: center;
+}

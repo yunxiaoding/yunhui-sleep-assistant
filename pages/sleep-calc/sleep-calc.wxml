@@ -1,0 +1,31 @@
+<!--pages/sleep-calc/sleep-calc.wxml-->
+<view class="container">
+  <view class="title">入睡时间推算</view>
+  <view class="subtitle">根据起床时间按睡眠周期倒推</view>
+
+  <view class="card">
+    <view class="input-label">起床时间</view>
+    <view class="picker-row">
+      <picker mode="selector" range="{{hourRange}}" value="{{wakeHour}}" bindchange="onHourChange">
+        <view class="picker-box">{{wakeHour}}时</view>
+      </picker>
+      <picker mode="selector" range="{{minRange}}" value="{{wakeMinIdx}}" bindchange="onMinChange">
+        <view class="picker-box">{{wakeMin}}分</view>
+      </picker>
+    </view>
+    <button class="btn-primary" bindtap="calcSleep">推算入睡时间</button>
+  </view>
+
+  <block wx:if="{{calculated}}">
+    <view class="result-card">
+      <view class="result-title">若 {{wakeTimeText}} 起床，推荐入睡时间：</view>
+      <view class="result-list">
+        <view class="result-item" wx:for="{{results}}" wx:key="cyc">
+          <view class="result-cyc">睡{{item.cyc}}个周期（{{item.hours}}小时）</view>
+          <view class="result-time">{{item.time}}</view>
+        </view>
+      </view>
+    </view>
+    <view class="tip">建议选择睡4-5个周期，睡眠质量更佳</view>
+  </block>
+</view>

@@ -1,0 +1,32 @@
+<!--pages/records/records.wxml-->
+<view class="container">
+  <view class="title">睡眠记录</view>
+  <view class="subtitle">查看历史睡眠数据</view>
+
+  <!-- 无记录 -->
+  <block wx:if="{{!hasRecords}}">
+    <view class="empty">
+      <view class="empty-icon">😴</view>
+      <view class="empty-text">暂无睡眠记录</view>
+      <view class="empty-hint">快去开始第一次睡眠记录吧~</view>
+    </view>
+  </block>
+
+  <!-- 有记录 -->
+  <block wx:else>
+    <view class="avg-card">
+      <text>{{avgText}}</text>
+    </view>
+
+    <view class="record-list">
+      <view class="record-item" wx:for="{{records}}" wx:key="index">
+        <view class="record-date">{{item.date}}</view>
+        <view class="record-time">{{item.start}} - {{item.end}}</view>
+        <view class="record-duration">{{item.durationText}}</view>
+        <view class="record-status {{item.statusClass}}">{{item.statusText}}</view>
+      </view>
+    </view>
+
+    <button class="btn-secondary clear-btn" bindtap="clearRecords">清空记录</button>
+  </block>
+</view>

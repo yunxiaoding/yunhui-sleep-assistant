@@ -1,0 +1,46 @@
+<!--pages/sleep-timer/sleep-timer.wxml-->
+<view class="container">
+  <view class="title">睡眠计时</view>
+  <view class="subtitle">按下开始记录入睡时间</view>
+
+  <!-- 待开始 -->
+  <block wx:if="{{status === 'idle'}}">
+    <view class="timer-circle idle">
+      <view class="timer-label">准备就绪</view>
+      <view class="timer-hint">点击下方按钮开始</view>
+    </view>
+    <button class="btn-primary" bindtap="startTimer">开始记录</button>
+  </block>
+
+  <!-- 计时中 -->
+  <block wx:elif="{{status === 'running'}}">
+    <view class="timer-circle running">
+      <view class="timer-count">{{elapsedSec}}秒</view>
+      <view class="timer-label">计时中...</view>
+    </view>
+    <view class="info-row">
+      <text class="info-label">入睡时间</text>
+      <text class="info-value">{{startStr}}</text>
+    </view>
+    <button class="btn-primary" bindtap="stopTimer">结束计时</button>
+  </block>
+
+  <!-- 完成 -->
+  <block wx:elif="{{status === 'done'}}">
+    <view class="result-card">
+      <view class="result-icon">✅</view>
+      <view class="result-duration">{{durationText}}</view>
+      <view class="result-eval">{{evalText}}</view>
+    </view>
+    <view class="info-row">
+      <text class="info-label">入睡时间</text>
+      <text class="info-value">{{startStr}}</text>
+    </view>
+    <view class="info-row">
+      <text class="info-label">醒来时间</text>
+      <text class="info-value">{{endStr}}</text>
+    </view>
+    <button class="btn-primary" bindtap="resetTimer">再次记录</button>
+    <button class="btn-secondary" bindtap="resetTimer">返回</button>
+  </block>
+</view>

@@ -1,0 +1,85 @@
+/* pages/breath-guide/breath-guide.wxss */
+.breath-circle {
+  width: 400rpx;
+  height: 400rpx;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 50rpx auto;
+  transition: all 0.8s ease;
+}
+
+.breath-circle.idle {
+  background: rgba(255, 255, 255, 0.08);
+  border: 4rpx solid rgba(255, 255, 255, 0.15);
+}
+
+.breath-circle.inhale {
+  background: rgba(100, 200, 255, 0.2);
+  border: 4rpx solid #64c8ff;
+  transform: scale(1.05);
+}
+
+.breath-circle.hold {
+  background: rgba(255, 255, 100, 0.15);
+  border: 4rpx solid #ffd864;
+}
+
+.breath-circle.exhale {
+  background: rgba(200, 150, 255, 0.15);
+  border: 4rpx solid #c896ff;
+  transform: scale(0.95);
+}
+
+.breath-circle.done {
+  background: rgba(233, 69, 96, 0.15);
+  border: 4rpx solid #e94560;
+}
+
+.breath-hint {
+  font-size: 28rpx;
+  color: #8888aa;
+}
+
+.phase-name {
+  font-size: 40rpx;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.phase-count {
+  font-size: 80rpx;
+  font-weight: bold;
+  color: #ffffff;
+  margin-top: 10rpx;
+}
+
+.phase-unit {
+  font-size: 24rpx;
+  color: #a0a0c0;
+}
+
+.round-info {
+  font-size: 28rpx;
+  color: #a0a0c0;
+  margin-bottom: 10rpx;
+}
+
+.done-icon {
+  font-size: 72rpx;
+}
+
+.done-text {
+  font-size: 36rpx;
+  color: #ffffff;
+  font-weight: bold;
+  margin-top: 16rpx;
+}
+
+.done-hint {
+  font-size: 26rpx;
+  color: #e94560;
+  margin-top: 8rpx;
+}
